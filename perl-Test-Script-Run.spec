@@ -1,15 +1,15 @@
 %define upstream_name    Test-Script-Run
-%define upstream_version 0.05
+%define upstream_version 0.08
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	1
 
 Summary:	Test the script with run
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Test/Test-Script-Run-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(ExtUtils::MakeMaker)
@@ -60,3 +60,4 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Fri Apr 30 2010 cpan2dist 0.03-1mdv
 - initial mdv release, generated with cpan2dist
+
