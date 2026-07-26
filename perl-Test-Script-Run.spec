@@ -1,15 +1,13 @@
 %define upstream_name    Test-Script-Run
-%define upstream_version 0.08
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	0.08
+Release:	4
 
 Summary:	Test the script with run
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Test/Test-Script-Run-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Test/Test-Script-Run-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -28,7 +26,7 @@ like those should live below 'Test::' namespace, that's why we packed them
 and created this module.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
